@@ -101,9 +101,9 @@ class UploadComponent extends Component{
                   directors:state.uploadReducer.directors,
                   release:state.uploadReducer.release,
                   description:state.uploadReducer.description,
+                  poster:state.uploadReducer.poster,
                   files:state.uploadReducer.files},
     formSubmitted:state.formSubmitted
-
     }
  }
 

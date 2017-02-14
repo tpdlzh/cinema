@@ -8,6 +8,7 @@ import ReduxPromise from 'redux-promise';
 
 import App from './components/app';
 import UploadComponent from './components/UploadComponent';
+import MovieDetailComponent from './components/MovieDetailComponent';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
@@ -17,6 +18,7 @@ render(
      <Route path='/' component={App}>
        <Route path="/upload" component={UploadComponent}/>
      </Route>
+    <Route path=":id" component={App}/>
     </Router>
   </Provider>,
   document.getElementById('container')

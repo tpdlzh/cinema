@@ -3,6 +3,48 @@ body{
   font-family: 'Open Sans', sans-serif;
   color:rgba(0,0,0,.87);
   font-size: 16px;
+  position: relative;
+
+  .bold{
+    font-weight: 600;
+  }
+
+}
+
+html, body { height:100%; }
+
+a { color: inherit; }
+
+.container{
+  max-width: 1480px !important;
+}
+
+.text-block{
+
+   margin-top:5px;
+
+   h5{
+     font-size: 12px;
+     font-weight: 600;
+     display: inline;
+   }
+
+   span{
+     font-size: 13px;
+     display: inline-block;
+     margin-left:5px;
+   }
+}
+
+
+
+.clickable:hover{
+   cursor: pointer;
+   border-color:#2bbbad;
+}
+
+.posterSelected{
+  border-color:#2bbbad;
 }
 
 .thumbnail{
@@ -22,4 +64,275 @@ body{
 
 .dropZoneActiveStyle{
   borderStyle: 'solid';
+}
+
+#movieDetailContainer{
+  width:968px;
+  z-index: 999999;
+  position: fixed;
+  top:50px;
+  left:0;
+  right:0;
+  background: #fff;
+  padding:50px 50px 150px 50px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 6px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 6px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.5);
+  height: 100%;
+  overflow: auto;
+  display: none;
+
+  #closeBtn{
+    position: absolute;
+    right: -1px;
+    top: -38px;
+    width: 38px !important;
+    height: 38px !important;
+    margin: 0 !important;
+    border: 1px solid #cdcdcd !important;
+    background: #ffffff url('/images/btn_close.png') 9px 9px no-repeat !important;
+    opacity: 1;
+  }
+
+  .movie_details_container{
+
+     p{
+       font-size: 14px !important;
+       margin-bottom:4px;
+     }
+
+     .title_wrapper{
+        border-bottom:1px solid #e5e5e5;
+        margin-left:20px;
+        width:75%;
+
+        .title{
+          display: inline-block;
+        }
+
+        .bookingWrapper{
+          display: inline-block;
+          float:right;
+        }
+     }
+
+     .details{
+       margin-left:20px;
+       margin-top:10px;
+       padding-bottom:10px;
+       border-bottom:1px solid #e5e5e5;
+       width:75%;
+     }
+  }
+
+  .plotContainer{
+     margin-top:50px;
+     margin-bottom:30px;
+  }
+
+  .ratingCounter{
+    font-size:13px;
+  }
+
+  .rating{
+     margin-left:20px;
+     margin-top:20px;
+  }
+}
+
+.commentBoxContainer{
+   .commentFormContainer{
+     img{
+       margin-top:10px;
+     }
+   }
+
+   .btn_wrapper{
+     margin-top:20px;
+   }
+
+   .commentContainer{
+     border-bottom:1px solid #f0f0f0;
+     margin-top:10px;
+     margin-bottom:10px;
+
+     .date{
+       font-size:12px;
+     }
+
+     .comment{
+       font-size:14px;
+     }
+
+     .btn-floating{
+       background-color: #64b5f6 !important;
+       border-radius:20%;
+     }
+
+
+
+   }
+
+}
+
+
+
+.movieCardContainer{
+  .title, .description{
+    font-size:12px;
+  }
+  .description{
+    margin-top:3px !important;
+  }
+
+  .director{
+    margin-top:3px !important;
+    font-size: 14px;
+  }
+
+}
+
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+@keyframes fadeInHalf {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.fadeInHalf {
+  animation-name: fadeInHalf;
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes flipInX {
+  0% {
+    transform: perspective(800px) rotate3d(1,0,0,90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(800px) rotate3d(1,0,0,-20deg);
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(800px) rotate3d(1,0,0,10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(800px) rotate3d(1,0,0,-5deg);
+  }
+
+  100% {
+    transform: perspective(800px);
+  }
+}
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+
+@keyframes flipOutX {
+  0% {
+    transform: perspective(400px);
+  }
+
+  30% {
+    transform: perspective(400px) rotate3d(1,0,0,-20deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: perspective(400px) rotate3d(1,0,0,90deg);
+    opacity: 0;
+  }
+}
+
+.flipOutX {
+  animation-name: flipOutX;
+  backface-visibility: visible !important;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  16.666% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  animation-name: shake;
 }

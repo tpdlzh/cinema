@@ -21,6 +21,21 @@ const Schema = mongoose.Schema;
     description:{
       type:String
     },
+    rating:{
+      type:Number,
+      default:0
+    },
+    ratingTotal:{
+      type:Number,
+      default:0
+    },
+    ratingCounter:{
+      type:Number,
+      default:0
+    },
+    poster:{
+      type:String
+    },
     files:{
       type:Array
     }

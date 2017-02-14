@@ -1,0 +1,34 @@
+#newDivContainer{
+  z-index: 9999;
+  position: fixed;
+  top:0;
+  background: #ffffff;
+  opacity: 0.3;
+  height: 100%;
+  width:100%;
+}
+
+#loaderContainer{
+  position:fixed;
+  z-index:10000;
+  top:40%;
+  left: 50%;
+}
+
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInHalf {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.fadeInHalf {
+  animation-name: fadeInHalf;
+}

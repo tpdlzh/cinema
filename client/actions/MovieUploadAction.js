@@ -16,6 +16,7 @@ export const doSubmit = (formData) => {
   _formData_.append("genre",formData.genre);
   _formData_.append("actors",formData.actors);
   _formData_.append("directors",formData.directors);
+  _formData_.append("poster",formData.poster);
   _formData_.append("release",moment(formData.release).format());
   _formData_.append("description",formData.description);
   let i = 0;

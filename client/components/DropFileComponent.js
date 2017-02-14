@@ -10,12 +10,17 @@ class DropFileComponent extends Component{
     this.props.updateFormField(files,"files");
   }
 
+  selectPoster(filename,e){
+    this.props.updateFormField(filename,"poster");
+  }
+
   displayPreview(){
      let items = this.props._formData.map((file,index)=>{
+       let className = this.props.poster == file.name ? "thumbnail pull-left clickable posterSelected" : "thumbnail pull-left clickable";
        return <li key={index}>
-                <img className="thumbnail pull-left" src={file.preview} />
+                <img onClick={this.selectPoster.bind(this,file.name)} className={className} src={file.preview} />
               </li>;
-     })
+     })  
      return (<ul>{items}</ul>);
   }
 
@@ -38,7 +43,7 @@ class DropFileComponent extends Component{
 }
 
 const stateToProps = (state) =>{
-  return {_formData:state.uploadReducer.files};
+  return {_formData:state.uploadReducer.files,poster:state.uploadReducer.poster};
 }
 
 const actionToDispatch = (dispatch) => {

@@ -5,3 +5,4 @@ mongoose.Promise = global.Promise;
 mongoose.connect(config.MONGO_HOST);
 
 require('../model/MovieModel');
+require('../model/CommentModel');

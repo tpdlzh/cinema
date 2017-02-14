@@ -9,7 +9,8 @@ import moment from 'moment';
     actors:"",
     directors:"",
     release:moment(),
-    description:""
+    description:"",
+    poster:""
   };
 
 export default (state = movieFormData,action) => {
